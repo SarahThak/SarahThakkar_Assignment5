@@ -3,7 +3,7 @@ package com.cis365.week5.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "REP")
+@Table(name = "STARSHIP")
 public class Starship {
 
 
@@ -11,104 +11,58 @@ public class Starship {
     public Starship(){}
 
     @Id
-    @Column(name = "REP_NUM")
-    private String id;
+    @Column(name = "STARSHIPID")
+    private int starShipId;
 
-    @Column(name = "LAST_NAME")
-    private String lastName;
+    @Column(name = "NAME")
+    private String name;
 
-    @Column(name = "FIRST_NAME")
-    private String firstName;
+    @Column(name = "CREWSIZE")
+    private int crewSize;
 
-    @Column(name = "STREET")
-    private String streetAddress;
+    @Column(name = "SHIPCLASS")
+    private String shipClass;
 
-    @Column(name = "CITY")
-    private String city;
+    @Column(name = "LAUNCHSTARDATE")
+    private int launchStardate;
 
-    @Column(name = "STATE")
-    private String state;
-
-    @Column(name = "ZIP")
-    private String zipcode;
-
-    @Column(name = "COMMISSION")
-    private double commission;
-
-    @Column(name = "RATE")
-    private double rate;
-
-    public String getId() {
-        return id;
+    public int getStarShipId() {
+        return starShipId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setStarShipId(int starShipId) {
+        this.starShipId = starShipId;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getName() {
+        return name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public int getCrewSize() {
+        return crewSize;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setCrewSize(int crewSize) {
+        this.crewSize = crewSize;
     }
 
-    public String getStreetAddress() {
-        return streetAddress;
+    public String getShipClass() {
+        return shipClass;
     }
 
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
+    public void setShipClass(String shipClass) {
+        this.shipClass = shipClass;
     }
 
-    public String getCity() {
-        return city;
+    public int getLaunchStardate() {
+        return launchStardate;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setLaunchStardate(int launchStardate) {
+        this.launchStardate = launchStardate;
     }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
-    }
-
-    public double getCommission() {
-        return commission;
-    }
-
-    public void setCommission(double commission) {
-        this.commission = commission;
-    }
-
-    public double getRate() {
-        return rate;
-    }
-
-    public void setRate(double rate) {
-        this.rate = rate;
-    }
-
-
 }

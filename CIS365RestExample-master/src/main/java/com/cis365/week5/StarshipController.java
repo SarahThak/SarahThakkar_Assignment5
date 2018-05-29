@@ -13,7 +13,6 @@ import java.util.List;
  *
  * @author Sarah
  */
-public class StarshipController {
     
 @RestController
 public class StarshipController {
@@ -48,3 +47,4 @@ public class StarshipController {
 
     
 }
+
