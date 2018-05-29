@@ -65,9 +65,9 @@ public class DataStore {
         try{
             transaction = session.beginTransaction();
             Planet existing = findPlanetById(planetId);
-            existing.setPlanetAtmosphere(planetInput.getPlanetAtmosphere());
-            existing.setPlanetName(planetInput.getPlanetName());
-            existing.setPlanetRadius(planetInput.getPlanetRadius());
+            existing.setAtmosphere(planetInput.getAtmosphere());
+            existing.setName(planetInput.getName());
+            existing.setRadius(planetInput.getRadius());
             System.out.println("Planet "+planetId+" has been updated");
             session.update(existing);
             transaction.commit();
