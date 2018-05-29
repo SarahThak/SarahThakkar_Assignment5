@@ -10,7 +10,7 @@ public class Planet {
 
     @Id
     @Column(name = "PLANETID")
-    private int planetId;
+    private String planetId;
 
     @Column(name = "NAME")
     private String name;
@@ -21,7 +21,7 @@ public class Planet {
     @Column(name = "ATMOSPHERE")
     private String atmosphere;
 
-    public Planet(int planetIDIn, String nameIn, int radiusIn, String atmosphereIn) {
+    public Planet(String planetIDIn, String nameIn, int radiusIn, String atmosphereIn) {
 
         this.planetId = planetIDIn;
         this.name = nameIn;
@@ -29,11 +29,11 @@ public class Planet {
         this.atmosphere = atmosphereIn;
     }
 
-    public int getPlanetId() {
+    public String getPlanetId() {
         return planetId;
     }
 
-    public void setPlanetId(int planetId) {
+    public void setPlanetId(String planetId) {
         this.planetId = planetId;
     }
 

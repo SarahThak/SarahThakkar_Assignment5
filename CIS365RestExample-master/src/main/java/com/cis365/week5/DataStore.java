@@ -92,9 +92,9 @@ public class DataStore {
             transaction = session.beginTransaction();
             Planet existing = new Planet();
             existing.setPlanetId(planetInput.getPlanetId());
-            existing.setPlanetAtmosphere(planetInput.getPlanetAtmosphere());
-            existing.setPlanetName(planetInput.getPlanetName());
-            existing.setPlanetRadius(planetInput.getPlanetRadius());
+            existing.setAtmosphere(planetInput.getAtmosphere());
+            existing.setName(planetInput.getName());
+            existing.setRadius(planetInput.getRadius());
             System.out.println("Planet "+existing.getPlanetId()+" has been added");
             session.save(existing);
             transaction.commit();
@@ -142,9 +142,9 @@ public class DataStore {
         try{
             transaction = session.beginTransaction();
             Starship existing = findStarshipById(starShipId);
-            existing.setStarshipName(starshipInput.getStarshipName());
-            existing.setStarshipCrewSize(starshipInput.getStarshipCrewSize());
-            existing.setStarshipClass(starshipInput.getStarshipClass());
+            existing.setName(starshipInput.getName());
+            existing.setCrewSize(starshipInput.getCrewSize());
+            existing.setShipClass(starshipInput.getShipClass());
             existing.setLaunchStarDate(starshipInput.getLaunchStarDate());
             System.out.println("Starship "+starShipId+" has been updated");
             session.update(existing);
@@ -169,12 +169,12 @@ public class DataStore {
         try{
             transaction = session.beginTransaction();
             Starship existing = new Starship();
-            existing.setStarshipId(starshipInput.getStarshipId());
-            existing.setStarshipName(starshipInput.getStarshipName());
-            existing.setStarshipCrewSize(starshipInput.getStarshipCrewSize());
-            existing.setStarshipClass(starshipInput.getStarshipClass());
+            existing.setStarShipId(starshipInput.getStarShipId());
+            existing.setName(starshipInput.getName());
+            existing.setCrewSize(starshipInput.getCrewSize());
+            existing.setShipClass(starshipInput.getShipClass());
             existing.setLaunchStarDate(starshipInput.getLaunchStarDate());
-            System.out.println("Starship "+existing.getStarshipId()+" has been added");
+            System.out.println("Starship "+existing.getStarShipId()+" has been added");
             session.save(existing);
             transaction.commit();
 

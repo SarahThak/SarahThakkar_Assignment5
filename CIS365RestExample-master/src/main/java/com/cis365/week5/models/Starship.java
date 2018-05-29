@@ -24,7 +24,7 @@ public class Starship {
     private String shipClass;
 
     @Column(name = "LAUNCHSTARDATE")
-    private int launchStardate;
+    private int launchStarDate;
 
     public String getStarShipId() {
         return starShipId;
@@ -58,11 +58,11 @@ public class Starship {
         this.shipClass = shipClass;
     }
 
-    public int getLaunchStardate() {
-        return launchStardate;
+    public int getLaunchStarDate() {
+        return launchStarDate;
     }
 
-    public void setLaunchStardate(int launchStardate) {
-        this.launchStardate = launchStardate;
+    public void setLaunchStarDate(int launchStarDate) {
+        this.launchStarDate = launchStarDate;
     }
 }
