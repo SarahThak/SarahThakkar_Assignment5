@@ -197,7 +197,7 @@ public class DataStore {
         try{
             transaction = session.beginTransaction();
             Starship existing = new Starship();
-            existing.setStarshipId(starshipId);
+            existing.setStarShipId(starshipId);
 
             session.delete(existing);
             System.out.println("Planet "+starshipId+" has been deleted");
@@ -230,7 +230,7 @@ public class DataStore {
         return null;
     }
 
-    public static List<Planetvisit> listPlanetVisits( ) {
+    public static List<PlanetVisit> listPlanetVisits( ) {
         System.out.print("listPlanetVisits()");
 
         Session session = getSessionFactory().openSession();
@@ -246,18 +246,18 @@ public class DataStore {
         return null;
     }
 
-    public static Planetvisit addPlanetVisit(Planetvisit planetVisitInput){
+     public static PlanetVisit addPlanetVisit(PlanetVisit planetVisitInput){
 
         Session session = getSessionFactory().openSession();
         Transaction transaction = null;
 
         try{
             transaction = session.beginTransaction();
-            Planetvisit existing = new Planetvisit();
+            PlanetVisit existing = new PlanetVisit();
             existing.setPlanetId(planetVisitInput.getPlanetId());
             existing.setStarshipID(planetVisitInput.getStarshipID());
-            existing.setArrivalStarDate(planetVisitInput.getArrivalStarDate());
-            existing.setDepartureStarDate(planetVisitInput.getDepartureStarDate());
+            //existing.setArrivalStarDate(planetVisitInput.getArrivalStarDate());
+            //existing.setDepartureStarDate(planetVisitInput.getDepartureStarDate());
             System.out.println("Planet Visit "+existing.getPlanetId()+" has been added");
             session.save(existing);
             transaction.commit();
@@ -296,4 +296,6 @@ public class DataStore {
         }
         return null;
     }
+
+    
 }

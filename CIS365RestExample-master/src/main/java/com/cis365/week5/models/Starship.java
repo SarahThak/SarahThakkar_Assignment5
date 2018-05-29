@@ -12,7 +12,7 @@ public class Starship {
 
     @Id
     @Column(name = "STARSHIPID")
-    private int starShipId;
+    private String starShipId;
 
     @Column(name = "NAME")
     private String name;
@@ -26,11 +26,11 @@ public class Starship {
     @Column(name = "LAUNCHSTARDATE")
     private int launchStardate;
 
-    public int getStarShipId() {
+    public String getStarShipId() {
         return starShipId;
     }
 
-    public void setStarShipId(int starShipId) {
+    public void setStarShipId(String starShipId) {
         this.starShipId = starShipId;
     }
 

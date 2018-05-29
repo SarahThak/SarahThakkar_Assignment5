@@ -11,13 +11,13 @@ public class PlanetVisitController {
 
     @GetMapping("/visit")
     public List<PlanetVisit> visits() {
-        return DataStore.listVisits();
+        return DataStore.listPlanetVisits();
     }
 
    
 
     @PostMapping(value="/visit/{planetId}", consumes = { MediaType.APPLICATION_JSON_VALUE})
-      public Planetvisit addPlanetVisit(@RequestBody Planetvisit planetVisitToAdd) {
+      public PlanetVisit addPlanetVisit(@RequestBody PlanetVisit planetVisitToAdd) {
         return DataStore.addPlanetVisit(planetVisitToAdd);
       }
 }
